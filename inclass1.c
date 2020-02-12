@@ -27,14 +27,18 @@ int main(int argc, char** argv){
 
 	/*
 		TODO:
-		print the size of a type plus another type, see the example
+	print the size of a type plus another type, see the example
 		int+long
 	*/
 	printf("#####student code start#####\n");
 	//////////Your code here//////////
+	int typeInt = 9;
+	double typeDouble = 10.0;
+	printf("my example size of int+double: %1u\n", sizeof(typeInt + typeDouble));
 
 	//example
 	int type_int = 0;
+
 	long type_long = 0;
 	printf("size of int+long: %lu\n", sizeof(type_int+type_long));
 
@@ -81,6 +85,11 @@ int main(int argc, char** argv){
 	*/
 	printf("#####student code start#####\n");
     //////////Your code here//////////
+	printf("signed int max + 1: %d\n", INT_MAX + 1);
+	printf("unsigned int max + 1: %u\n", UINT_MAX + 1);
+	printf("signed long max + 1: %ld\n", LONG_MAX + 1);
+	printf("max float + 1: %g\n", FLT_MAX + 1);
+	printf("max float + 1000: %g\n", FLT_MAX + 1000);
 
 	//////////End of the code/////////
 	printf("#####student code end#####\n");
@@ -92,11 +101,12 @@ int main(int argc, char** argv){
 	printf("size of s1: %lu\n", sizeof(s1));
 	char* s2 = "asdasdasd";
 	printf("size of s2: %lu\n", sizeof(s2));
+	printf("both have the same size because they are the same type and get allocated the same amount of memory even if its used differently");
 	/*
 		TODO:
 		Why we are getting this result?
 	*/
-
+	
 	printf("\nIs 1 equals to true? \n");
 	//1 is true, 0 is false
 	if(1)
@@ -124,8 +134,8 @@ int main(int argc, char** argv){
     }
 
     //TODO: uncommend below code after complete print_string fucntion
-    //print_string(s1);
-    //print_string(s2);
+    print_string(s1);
+    print_string(s2);
 
     //exit status for the OS, 0 means no error.
     //It is different than the C true/false value
@@ -146,3 +156,6 @@ void func1(int* i){
 	as input and no output.
 	This function needs to print the string in the concole.
 */
+void print_string(char* s){
+	printf("%s",s);
+}
